@@ -86,4 +86,4 @@ uvicorn main:app --reload --port 8000
 - Free tier on Render may spin down after inactivity (takes 30-60s to wake up)
 - First request after inactivity will be slow
 - Upgrade to paid plan for always-on service
-- Keep your API key secure (use environment variables)
+- Keep your API key secure (use environment variables).

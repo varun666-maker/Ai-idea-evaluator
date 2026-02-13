@@ -25,6 +25,16 @@ os.environ["GEMINI_API_KEY"] = API_KEY
 # Initialize FastAPI app
 app = FastAPI(title="AI Idea Evaluator")
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all for testing
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # Initialize Gemini client
 client = genai.Client()
 
